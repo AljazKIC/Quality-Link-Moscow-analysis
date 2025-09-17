@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moscow Development Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .poster {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .priority-section {
+            margin-bottom: 40px;
+        }
+
+        .priority-header {
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .must { background: #e74c3c; }
+        .should { background: #f39c12; }
+        .could { background: #27ae60; }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px;
+        }
+
+        .feature-item {
+            border: 1px solid #eee;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .feature-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .feature-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+
+        .feature-meta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .feature-id {
+            background: #333;
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.9em;
+        }
+
+        .feature-size {
+            background: #666;
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.8em;
+        }
+
+        .feature-description {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .stats {
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="header">
+            <h1>MOSCOW DEV PLAN</h1>
+            <p>Educational Platform Development Roadmap</p>
+        </div>
+
+        <div class="content">
+            <!-- MUST HAVE Section -->
+            <div class="priority-section">
+                <div class="priority-header must">
+                    MUST HAVE
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Organization Profiles</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">M01</div>
+                                <div class="feature-size">Medium</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Basic institutional metadata storage with known identifiers and official codes
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">HEI Dashboard/Aggregator Portal</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">M02</div>
+                                <div class="feature-size">Large</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Management interface accessible via Quality Link project page for institutional data
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Manifest Discovery System</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">M03</div>
+                                <div class="feature-size">Large</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            DNS TXT record lookup and manifest file discovery with domain search order
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">API Integration & Data Aggregation</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">M04</div>
+                                <div class="feature-size">Very Large</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Connects to institutional APIs for automated course data collection and updates
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Data Sources Registry</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">M05</div>
+                                <div class="feature-size">Medium</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Catalog of discovered data sources from manifest files with status monitoring
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Course Catalogue Frontend</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">M06</div>
+                                <div class="feature-size">Large</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Basic catalogue with filters (Domain, Country, Provider/Institution)
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Course Detail Pages</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">M07</div>
+                                <div class="feature-size">Medium</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Display all available metadata for individual courses with structured information, including enrollment outlinks with periods, deadlines, and cost information
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHOULD HAVE Section -->
+            <div class="priority-section">
+                <div class="priority-header should">
+                    SHOULD HAVE
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Skills Translation via Skill Finder</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">S03</div>
+                                <div class="feature-size">Large</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Automatic translation of learning outcomes to standardized skills frameworks (ESCO) using Skill Finder technology
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Side-by-Side Course Comparison</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">S04</div>
+                                <div class="feature-size">Large</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Compare multiple courses with aligned key attributes including duration, cost, outcomes, and learning objectives
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Course Stackability Information</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">S05</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Information on course relationships, prerequisites, and pathways to larger qualifications
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COULD HAVE Section -->
+            <div class="priority-section">
+                <div class="priority-header could">
+                    COULD HAVE
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-header">
+                            <div class="feature-title">Rating & Favourites System</div>
+                            <div class="feature-meta">
+                                <div class="feature-id">C01</div>
+                                <div class="feature-size">Medium</div>
+                            </div>
+                        </div>
+                        <div class="feature-description">
+                            Course rating (1-5 stars), personal favourites collection, and social sharing capabilities
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Must Have</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Should Have</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Could Have</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Total Features</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
